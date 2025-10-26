@@ -1,0 +1,210 @@
+/* Section titles -for all- */
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.section-title .subtitle {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.section-title .subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--accent-color);
+}
+
+.section-title p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  max-width: 1000px;
+  margin: 0 auto;
+  text-wrap: balance;
+}
+
+
+/* Section Resume -experiences et skills - */
+
+#resume{
+    margin: 10em 0 5em 0;
+}
+
+#resume h2{
+    margin-top: 1em;
+}
+
+#resume .snd_title{
+    margin-top: 1.8em;
+}
+
+#resume h3{
+    text-align: left;
+    margin: 2em 0 1em 0;
+}
+
+.skills-list .skill-item {
+  margin-bottom: 28px;
+}
+
+.skills-list .skill-item .skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skills-list .skill-item .skill-info .skill-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.skills-list .skill-item .skill-info .skill-percent {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.skills-list .skill-item .progress {
+  height: 10px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+  overflow: hidden;
+}
+
+.skills-list .skill-item .progress .progress-bar {
+  width: 0;
+  height: 100%;
+  background: color var(--accent-color);
+  border-radius: 10px;
+  position: relative;
+}
+
+
+
+
+/* Section Contact */
+
+#contact h2{
+    margin-top: 0.8em;
+}
+
+#contact .snd_title{
+    margin-top: 3em;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.details-grid .detail-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--surface-color);
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  transition: all 0.3s ease;
+}
+
+.details-grid .detail-item:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.details-grid .detail-item i {
+  font-size: 28px;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+ 
+.details-grid .detail-item .detail-content span {
+  display: block;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  /* left: 20px; */
+  /* margin-left: -20px; */
+}
+
+#fix_bug{
+  margin-left: -10em;
+}
+
+#fix_bug2{
+  margin-left: -2em;
+}
+
+.details-grid .detail-item .detail-content strong {
+  display: block;
+  font-size: 16px;
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.social-connect {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 30px;
+}
+
+.social-connect a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+  border-radius: 12px;
+  color: var(--default-color);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-connect a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-3px);
+}
+
+.social-connect img{
+    width: 30px;
+    height: 30px;
+}

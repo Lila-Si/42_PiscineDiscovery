@@ -1,0 +1,45 @@
+<!-- 
+Consignes :
+Copiez votre tableau de la cellule 1-5, et rendez-le sensible au rétrécisseement du navigateur. La tableau doit couvrir entièrement votre page web. Le tableau doit rétrécir. Faites comme bon vous semble, mais n'écoutez pas les professionnels du Javascript qui vous disent qu'on ne peut pas faire sans. Restez donc sur du CSS.
+ -->
+
+<!-- J'imagine que le but était d'utiliser 'media (screen)' mais personnellement j'ai préféré faire plus simple (reste fonctionnel) : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table style="width:100%;">
+        <tr>
+            <td class="cellune">Coucou les gens</td>
+            <td class="celldeux">Ciao les gens</td>
+        </tr>
+</table>
+</body>
+
+<style>
+    table, td{
+        border: 2px solid gray;
+        border-collapse: collapse;
+    }
+
+    table{
+        height: 99vh;
+    }
+
+    .cellune{
+        background-color: burlywood;
+    }
+
+    .celldeux{
+        background-color: cadetblue;
+    }
+</style>
+
+</html>

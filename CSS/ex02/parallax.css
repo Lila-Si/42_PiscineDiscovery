@@ -1,0 +1,45 @@
+body, html{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    color: white;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.text{
+    text-shadow: 0 10px 20px white;
+}
+
+.parrallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.one{
+    height: 90%;
+    background-image: url(montagnes.avif)
+}
+
+.two{
+    height: 70%;
+    background-image: url(automne.avif)
+}
+
+.static{
+    height: 30%;
+    background-color: black;
+}

@@ -1,0 +1,48 @@
+<!-- 
+Les consignes :
+ - Dans cette cellule nous allons mettre en place notre carte de profil.
+ - Pour réaliser ce projet vous devez créer une page avec ces contraintes :
+     - Un titre situé au dessus de votre carte.
+     - Un tableau invisible pour alligner les informations.
+     - Une photo de profil.
+     - Votre login situé sous cette photo.
+     - Un descriptif en 2-3 mots sous votre login.
+     - Queques petites images alignées pour les réseaux sociaux.
+     - Un bouton cliquable en bas de votre carte avec pour texte "Contact".
+     - Vous pouvez mettre en place des liens sur les images des réseaux sociaux, cette partie est facultative.
+Voici un exemple de ce qui est attendu : -une image d'exemple-
+Vous pouvez choisir les couleurs, la taille et la police que vous souhaitez.
+-->
+
+<!-- Pour le moins étrange de se servir d'un tableau, mais j'ai pu le faire sans trop de soucis : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="card.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="card">
+    <h1>User Profile Card</h1>
+    <table>
+        <tr><td><img class="card_imgprofil" src="images/chat.jpg" alt="Un image de profil chat"></td></tr>
+        <tr><td><h2>lisi-ahm</h2></td></tr>
+        <tr><td class="card_text"><p>Piscine Discovery</p><br><p>42Lyon</p></td></tr>
+        <tr>
+            <td>
+                <img class="card_imgcontact" src="images/github.png" alt="Logo github">
+                <img class="card_imgcontact" src="images/insta.png" alt="Logo Instagram">
+                <img class="card_imgcontact" src="images/linkedin.png" alt="Logo LinkedIn">
+                <img class="card_imgcontact" src="images/x.png" alt="Logo X">
+            </td>
+        </tr>
+        <tr><td class="card_button"><button>Contact</button></td></tr>
+    </table>
+    </div>
+</body>
+</html>

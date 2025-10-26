@@ -1,0 +1,60 @@
+<!-- 
+Pour le coup ils se sont amusés avec les consignes :
+Un train part de Paris pour Lyon, le samedi 12 septembre 1985, jour d'une éclipse de lune. Il fait du 216km/h, le vent souffle de force 5 au sud/sud-est, et la température est de 13 degrés centigrades à l'extérieur du wagon, et de 22 à l'intérieur. Le ciel est nuageux. Un autre train part de Lyon pour Paris, le même jour, à 23h00. Il fait du 224km/h. Lequel de ces deux trains sera le plus loin de Paris quand ils se croiseront ?
+Pendant que vous réfléchissez à la question, mangez donc un sandwich SNCF, communément appelé "Menu des roulants". Certains ingrédients sont autorisés, d'autres interdits :
+ - Ingrédient CSS : OK.
+ - Ingrédient HTML : OK.
+ - Ingrédient Javascript : NON.
+ - Ingrédient autre : NON.
+Bien que l'esthétique soit subjective, faites donc un sandwich SNCF -un menu des roulants- qui soit appétissant -plutôt sympa à regarder-.
+-->
+
+<!-- Je me suis aidée du site frogweb.fr (qui présente justement quelques menu déroulant uniquement html/css).
+ Ensuite j'ai joué avec dans CodePen (modifié et supprimé des trucs) jusqu'à avoir ma version finale : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <title>Menu des roulants</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><span>Ceux basiques</span>
+                <ul>
+                    <li><a target="_blank" href="https://www.bing.com/">Bing</a></li>
+                    <li><a target="_blank" href="https://search.brave.com/?lang=fr-fr">Brave</a></li>
+                    <li><a target="_blank" href="https://duckduckgo.com/">DuckDuckGo</a></li>
+                    <li><a target="_blank" href="https://www.google.com/">Google</a></li>
+                    <li><a target="_blank" href="https://fr.yahoo.com/">Yahoo</a></li>
+                </ul>
+                </li>
+                <li><span>Ceux sympa</span>
+                <ul>
+                    <li><a target="_blank" href="https://www.ecosia.org/?c=fr">Ecosia</a></li>
+                    <li><a target="_blank" href="https://ekoru.org/">Ekoru</a></li>
+                    <li><a target="_blank" href="https://www.givewater.com/">giveWater</a></li>
+                    <li><a target="_blank" href="https://www.lilo.org/">Lilo</a></li>
+                    <li><a target="_blank" href="https://youcare.world/">Youcare</a></li>
+                </ul>
+                </li>
+                <li><span>Les autres</span>
+                <ul>
+                    <li><a target="_blank" href="https://www.qwant.com/">Qwant</a></li>
+                    <li><a target="_blank" href="https://www.startpage.com/">Startpage</a></li>
+                    <li><a target="_blank" href="https://metasearx.com/">Searx</a></li>
+                    <li><a target="_blank" href="https://swisscows.com/en">Swisscows</a></li>
+                    <li><a target="_blank" href="https://you.com/home">You</a></li>
+                </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

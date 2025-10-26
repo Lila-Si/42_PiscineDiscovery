@@ -1,0 +1,89 @@
+<!-- 
+Les consignes :
+ - Créez en HTML/CSS une div de 200px par 200px avec en couleur de fond le rouge. Ses bordures seront arrondies afin de créer un rond parfait et non plus un carré. Ce div sera notre ballon.
+ - Lors d'un clic sur le ballon, sa taille augmentera de 10px tout en gardant sa forme arrondie. À chaque clic, sa couleur passera dans cet ordre du rouge, au vert, au bleu puis on reprend depuis le rouge.
+ - En règle générale ce type de ballon est plutôt résistant mais si sa taille est supérieure à 420px, il "explose" et reprend sa taille initiale.
+ - Petit détail supplémentaire, lorsque le curseur de la souris est dans le ballon puis le quitte, la taille du ballon diminue de 5px (la taille du ballon ne peut pas descendre en dessous de 200px) et sa couleur change dans l'ordre inverse que précédemment cité.
+-->
+
+<!-- J'ai un petit peu plus galéré, notamment concernant la couleur (seule demande d'aide à une IA de la semaine), mais au final ça n'était pas non plus bien compliqué : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+<style>
+    div{
+        margin: auto;
+        margin-top: 10em;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: red;
+    }
+</style>
+
+<script>
+    /* Logique :     Click => taillePlus (si taille >= 420 explosionBallon => modifierTailleBallon  sinon => modifierTailleBallon), MouseOut => tailleMoins (si pas égal à 200 => modifierTailleBallon)     */
+
+    var tailleBallon = 200;
+    const colorsPossible = ["red", "green", "blue"];
+    let colorIndex = 0;
+    const divElement = document.querySelector("div");
+
+    function modifierTailleBallon() {
+        var modifierTaille = tailleBallon.toString(10) + 'px';
+        divElement.style.width = modifierTaille;
+        divElement.style.height = modifierTaille;
+    };
+
+    function explosionBallon() {
+        tailleBallon = 200;
+        modifierTailleBallon();
+    };
+
+    function taillePlus() {
+        console.log("Fonction taillePlus bien appelée !");
+        if (tailleBallon >= 420) {
+            explosionBallon();
+        } else {
+            tailleBallon += 10;
+            modifierTailleBallon();
+            colorIndex = (colorIndex + 1) % colorsPossible.length;
+            divElement.style.backgroundColor = colorsPossible[colorIndex];
+        };
+    };
+
+    function tailleMoins() {
+        console.log("Fonction tailleMoins bien appelée !")
+        if (tailleBallon === 200) {
+            alert("Le ballon a une taille de 200px, il ne peut pas être dégonflé d'avantage");
+        } else {
+            tailleBallon -= 5;
+            modifierTailleBallon();
+            colorIndex = (colorIndex - 1 + colorsPossible.length) % colorsPossible.length;
+            divElement.style.backgroundColor = colorsPossible[colorIndex];
+        };
+    };
+
+    divElement.addEventListener("click", (event) => {
+        console.log("Ballon cliqué !");
+        taillePlus();
+    });
+
+    divElement.addEventListener("mouseout", (event) => {
+        console.log("Sortie survol ballon !");
+        tailleMoins();
+    });
+
+</script>
+</html>

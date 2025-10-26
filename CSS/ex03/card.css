@@ -1,0 +1,52 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div{
+    display: grid;
+    place-items: center;
+}
+
+table{
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card_imgprofil{
+    height: 20em;
+}
+
+table h2{
+    display: inline-block;
+    font-size: 2em;
+    padding-top: 0.5em;
+}
+
+.card_text p{
+    display: inline-block;
+}
+
+.card_text p:first-child{
+    opacity: 0.6;
+}
+
+.card_imgcontact{
+    height: 2em;
+    margin-top: 1em;
+    padding: 0.2em;
+    cursor: pointer;
+}
+
+.card_button{
+    padding-top: 0.9em;
+}
+
+.card_button button{
+    width: 100%;
+    padding: 0.5em 0 0.5em 0;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+<!-- 
+Les consignes :
+ - Pour cette nouvelle journée on va commencer doucement.
+ - Réalisez une page web avec un simple bouton. Lorsque l'on va cliquer sur le bouton le fond d'écran de notre page va devoir changer de couleur. La couleur utilisée doit être aléatoire.
+ - Vous devez utiliser uniquement du javascript basique avec du css et pas autre chose. L'utilisation de jquery est interdite ici.
+Voici un exemple de page attendue lorsque l'on arrive la première fois sur celle-ci : (une image fond blanc avec un bouton "click me!").
+Voici un second exemple de page attendue lorsque l'on a cliqué sur le bouton : (fond devenu vert).
+Voici un dernier exemple de page attendue lorsque l'on a cliqué une seconde fois sur le bouton : (fond devenu marron).
+-->
+
+<!-- On devait rendre un fichier html et un css, mais pas js (pour la simple et bonne raison qu'il fallait l'intégrer dans le html).
+ Voici donc : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="background.css">
+    <title>Document</title>
+</head>
+<body>
+    <button>Changer le fond</button>
+</body>
+
+<script>
+    function changeColor() {
+        console.log("Fonction changeColor appelée");
+        const htmlElement = document.querySelector("html");
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        htmlElement.style.background = randomColor;
+    };
+
+    var buttonElement = document.querySelector("button");
+    buttonElement.addEventListener("click", (event) => {
+        console.log("Bouton cliqué !");
+        changeColor();
+    });
+</script>
+</html>
+
+<!-- J'aurais pu simplement associer l'évenement en attribut du bouton (le onclick="myFunction()") au lieu de le récupérer et initialiser l'événement.
+ Ça aurait sans doute été plus court mais j'ai pas trop réfléchi sur le moment, simplement fait comme j'ai l'habitude de faire (mais dans des fichiers séparés normalement...) -->

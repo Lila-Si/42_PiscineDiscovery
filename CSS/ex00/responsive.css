@@ -1,0 +1,17 @@
+table, td{
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+
+table{
+    height: 99vh;
+    width: 100%;
+}
+
+.cellune{
+    background-color: burlywood;
+}
+
+.celldeux{
+    background-color: cadetblue;
+}

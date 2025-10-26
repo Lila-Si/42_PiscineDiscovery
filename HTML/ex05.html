@@ -1,0 +1,44 @@
+<!-- 
+Les consignes :
+ - Réalisez une page web avec un tableau de deux cases comme ci-dessous : -image d'exemple-
+ - Les contraintes sont les suivantes :
+    - Chaque case du tableau contient un texte de votre choix.
+    - Chaque case du tableau contient une couleur de votre choix.
+-->
+
+<!-- Mon résultat : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table style="width:100%; height: 8em;">
+        <tr>
+            <td class="cellune">Coucou les gens</td>
+            <td class="celldeux">Ciao les gens</td>
+        </tr>
+    </table>
+</body>
+
+<style>
+    table, td{
+        border: 2px solid gray;
+        border-collapse: collapse;
+    }
+
+    .cellune{
+        background-color: burlywood;
+    }
+
+    .celldeux{
+        background-color: cadetblue;
+    }
+</style>
+
+</html>

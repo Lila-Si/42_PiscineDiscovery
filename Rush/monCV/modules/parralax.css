@@ -1,0 +1,27 @@
+.parrallax_texte, .parrallax_title{
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.parrallax_title{
+    padding-top: 3em;
+    text-shadow: -0.12em 0.1em 35px black;
+    font-weight: bold;
+    font-size: 10em;
+}
+
+.parrallax_texte{
+    font-size: 1.5em;
+    text-shadow: 5px 10px 10px black;
+}
+
+.parrallax{
+    height: 80vh;
+    background-image: url(../image/foret.avif);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px -20px 78px 9px rgba(255, 255, 255, 0.5);
+}

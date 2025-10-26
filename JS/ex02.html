@@ -1,0 +1,133 @@
+<!-- 
+Les consignes :
+ - Pour cet exercice nous allons faire une calculatrice basique.
+ - Aucune lib n'est autorisée. Le design importe peu du moment que l'exercice reste réalisable.
+ - Tout d'abord modélisons notre calculatrice. Elle sera composée de la manière suivante :
+     - Un input de type text qui représente le membre de gauche de notre calcul.
+     - Un select qui contiendra en options la liste des opérateurs suivants ('+', '-', '*', '/', '%').
+     - Un input de type text qui représente le membre de droite de notre calcul.
+     - Un input de type submit et de valeur 'Try me!'
+ - Lorsque l'on clique sur le bouton 'Try me!', le calcul est déclenché puis le résultat apparaît dans une fenêtre d'alerte. Le résultat devra être également affiché sur la console de votre navigateur (log).
+ - Le membre de gauche et de droite ne doivent contenir que des entiers positifs (>=0) pour que le calcul puisse se réaliser. Sinon, il faut afficher une alerte avec le texte 'Error :('.
+ - La division et le modulo par zéro afficheront comme alerte : "It's over 9000!" ainsi que dans les logs de la console.
+ - Toutes les 30 secondes, un message d'alerte doit apparaître en disant 'Please, use me...'.
+-->
+
+
+<!-- Quelques trucs qui m'ont fait un peu galéré, mais réalisée sans trop de complications : -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="elementDroite">Rentrez un nombre :</label>
+        <input type="text" id="elementDroite" name=""><br>
+
+        <label for="elementAction">Action à réaliser :</label>
+        <select name="" id="elementAction">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select><br>
+
+        <label for="elementGauche">Rentrez un nombre :</label>
+        <input type="text" id="elementGauche" name=""><br>
+
+        <input type="submit" id="elementButton" value="Try me!">
+    </form>
+</body>
+
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5em;
+    }
+
+    form{
+        display: grid;
+        place-items: center;
+        margin-top: 20em;
+    }
+
+    input[type="submit"]{
+        padding: 0.8em 2.5em;
+        border: 2px solid gray;
+        border-radius: 20px;
+        background-color: whitesmoke;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+
+    let formElem = document.querySelector("form");
+
+    function timeRepeat() {
+        setInterval(() => alert("Please, use me..."), 30000);
+    };
+
+    setTimeout(timeRepeat, 0);
+
+    function recupValue() {
+        let valueElemDroite = document.getElementById("elementDroite").value;
+        let valueElemaction = document.getElementById("elementAction").value;
+        let valueElemGauche = document.getElementById("elementGauche").value;
+        return [valueElemDroite, valueElemaction, valueElemGauche];
+    };
+
+    function calculValue() {
+        const [elemDroite, elemAction, elemGauche] = recupValue();
+        if (elemDroite<0 || elemGauche<0) {
+            alert("Error :(");
+        } else if ((elemAction==="/" || elemAction==="%") && (elemDroite==0 || elemGauche==0)) {
+            console.log("It's over 9000!");
+            alert("It's over 9000!");
+        } else {
+            switch (elemAction) {
+                case "+":
+                    resultCalcul = parseInt(elemDroite) + parseInt(elemGauche);
+                    break;
+
+                case "-":
+                    resultCalcul = parseInt(elemDroite) - parseInt(elemGauche);
+                    break;
+
+                case "*":
+                    resultCalcul = parseInt(elemDroite) * parseInt(elemGauche);
+                    break;
+
+                case "/":
+                    resultCalcul = parseInt(elemDroite) / parseInt(elemGauche);
+                    break;
+                
+                case "%":
+                    resultCalcul = parseInt(elemDroite) % parseInt(elemGauche);
+                    break;
+
+                default:
+                    console.log("Résultat anormal !");
+                    break;
+            };
+            console.log(resultCalcul);
+            alert(resultCalcul);
+        };
+    };
+
+    formElem.addEventListener("submit", (event) => {
+        calculValue();
+    });
+
+</script>
+
+</html>
+
+
+<!-- D'ailleurs, je me suis servie d'un setTimeout(0) qui appelle un setInterval. C'était pour l'alert toutes les 30s SANS une alert au moment de lancer le programme (seulement 30s après) -ce qui arrivait avec juste le setInterval (c'était fondalement pas faux, mais je n'aimais pas -du coup je me suis acharnée sur divers trucs avant de trouver cette "solution" fonctionnelle, après si c'est "propre"...)- -->

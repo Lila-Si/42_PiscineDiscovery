@@ -1,0 +1,47 @@
+body{
+    background-image: url('background2.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div{
+    display: grid;
+    place-items: center;
+    margin: 15em auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 40em;
+    height: 17em;
+    border: 2px solid black;
+    border-radius: 45px;
+}
+
+h2{
+    margin-top: 2em;
+    color: white;
+}
+
+button{
+    width: 90%;
+    padding: 1.5em 0;
+    border: 2px solid gray;
+    background-color: white;
+    border-radius: 15px;
+}
+
+button:last-child{
+    margin-bottom: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3em;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 0.25em;
+    text-underline-offset: 0.25em;
+}

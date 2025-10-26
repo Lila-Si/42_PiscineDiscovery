@@ -1,0 +1,67 @@
+<!-- 
+Cette fois pas mal de consignes :
+ - Réalisez une page web qui contient les éléments suivants :
+ - Un fond d'écran rose ("Pink ? what's wrong with pink ?"). Attention ce n'est pas une couleur au hasard.
+ - Un titre de l'onglet de navigation : "B.A.BA"
+ - Un titre -donc plus gros- en blanc centré qui contient au moins un accent
+ - Deux images côte à côte représentant des boutiques en ligne
+ - Sous chaque image, un lien vers le site web correspondant
+ - En dessous, une ligne horizontale qui sépare la page (quelle que soit la taille de la fenêtre)
+ - Enfin, sous cette ligne, aligné sur le côté droit de la page, en italique et avec une police de caractères monospace, le sigle copyright, votre login, et l'année en cours ("© wil 2021").
+
+   Note : cet exercice est à consommer avec modération.
+ -->
+
+<!-- Mon travail (je me suis amusée à améliorer un peu avec du css) -->
+
+<!DOCTYPE html>
+<html lang="fr" style="background-color: pink;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.A.BA</title>
+</head>
+
+<body>
+    <h1>Un titre accenté</h1>
+    <div>
+    <figure>
+        <img src="images/asos.jpg" alt="Logo ASOS">
+        <figcaption><a target="_blank" href="https://www.asos.com/fr/">Un lien vers ASOS</a></figcaption>
+    </figure>
+    <figure>
+        <img src="images/galeriesfayette.jpg" alt="Logo Galeries Lafayette">
+        <figcaption><a target="_blank" href="https://www.galerieslafayette.com/">Un lien vers Galeries Lafayette</a></figcaption>
+    </figure>
+    </div>
+
+    <hr>
+
+    <p>© lisi-ahm 2025</p>
+</body>
+
+<style>
+    h1{
+        color: white;
+        text-align: center;
+    }
+
+    img{
+        width: 50em;
+        height: 30em;
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+    }
+
+    p{
+        font-family: 'Courier New', Courier, monospace;
+        font-style: italic;
+        text-align: right;
+    }
+</style>
+
+</html>
