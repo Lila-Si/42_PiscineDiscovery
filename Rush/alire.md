@@ -23,5 +23,5 @@ Au lieu de partir d'un template Bootstrap comme beaucoup, j'ai préféré partir
 
 Problème engendré : quelques bugs étant donné que certains trucs était rattachés les uns aux autres (notamment des barres de progression mal affichés). J'ai pas eu le temps de tout corriger malheureusement.
 
-Autre problème : J'ai eu la surprise de voir que sur Safari (une fois de retour sur mon ordi personnel) le rendu était catastrophiquement différent. J'avais déjà vu et savais qu'il y avait des prises en charge différentes mais première fois que je vois quelque chose altérée à ce point.  
-Note : Je n'ai pas cherché à corriger.
+Autre problème : J'ai eu la surprise de voir que sur Safari (une fois de retour sur mon ordi personnel) le rendu était catastrophiquement différent. J'avais déjà vu et savais qu'il y a des prises en charge différentes selon les navigateurs, mais première fois que je vois quelque chose altérée à ce point.  
+Je n'ai pas cherché à corriger (je préfèrais laisser l'exercice tel que je l'avais rendu, sans l'altérer).
